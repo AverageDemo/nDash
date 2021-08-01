@@ -9,7 +9,7 @@ export default function BWelcome({ user }: Props) {
           Hello<p>{user}</p>
         </div>
         <div className="py-8 text-blue-200">
-          Today is <span className="text-gray-50">{moment(Date.now()).format('dddd, MMMM Do YYYY')}</span>
+          Today is <span className="text-gray-50">{moment().format('dddd, MMMM Do YYYY')}</span>
         </div>
       </BCard>
     </div>

@@ -24,8 +24,8 @@ export default function Weather({ appContext }: Props) {
   useEffect(() => {
     if (appContext.ow_api && latLong) {
       // Only update daily forecast if it's >= 6 hours old or the weather object is null
-      const lastCall = localStorage.getItem('lastCall');
-      if (Date.now() - Number(lastCall) >= 60 * 60 * 6 * 1000 || localStorage.getItem('forecastObject') === null) {
+      const forecastTime = localStorage.getItem('forecastTime');
+      if (Date.now() >= Number(forecastTime) + 60 * 60 * 6 * 1000 || localStorage.getItem('forecastObject') === null) {
         console.log('One Call API called');
         fetch(apiUrl(latLong[0], latLong[1], appContext.ow_api, true))
           .then((res) => {
@@ -35,7 +35,7 @@ export default function Weather({ appContext }: Props) {
             if (!data.cod) {
               setForecastObject(data);
               localStorage.setItem('forecastObject', JSON.stringify(data));
-              localStorage.setItem('lastCall', String(Date.now()));
+              localStorage.setItem('forecastTime', String(Date.now()));
             } else {
               setTimeout(() => {
                 setError({
@@ -53,7 +53,7 @@ export default function Weather({ appContext }: Props) {
 
       // Only update current weather if it's >= 5 minutes old or the current weather object is null
       const currentWeatherTime = localStorage.getItem('currentWeatherTime');
-      if (Date.now() - Number(currentWeatherTime) >= 5 * 60 * 1000 || localStorage.getItem('currentWeather') === null) {
+      if (Date.now() >= Number(currentWeatherTime) + 60 * 5 * 1000 || localStorage.getItem('currentWeather') === null) {
         console.log('Current Weather API called');
         fetch(apiUrl(latLong[0], latLong[1], appContext.ow_api))
           .then((res) => {

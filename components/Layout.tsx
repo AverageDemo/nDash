@@ -8,7 +8,11 @@ export default function Layout({ name, children }: Props) {
         <title>{name && `${name}'s`} Dashboard</title>
       </Head>
 
-      <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">{children}</div>
+      <div className="flex h-screen">
+        <div className="m-auto">
+          <div className="flex flex-wrap -mx-1 overflow-hidden sm:-mx-1 md:-mx-1 lg:-mx-1 xl:-mx-1">{children}</div>
+        </div>
+      </div>
     </div>
   );
 }
