@@ -2,9 +2,9 @@ import BTask from '@/blocks/BTask';
 import Start from '@/components/Start';
 import BWelcome from '@/blocks/BWelcome';
 import Layout from '@/components/Layout';
-import Weather from '@/components/Weather';
 import { useAppContext } from '@/context/AppContext';
 import BSearch from '@/blocks/BSearch';
+import BWeather from '@/blocks/BWeather';
 
 export default function Home() {
   const appContext = useAppContext();
@@ -14,8 +14,9 @@ export default function Home() {
     if (localStorage.getItem('initialized')) {
       return (
         <Layout name={appContext.name}>
+          {/* Add or remove blocks here */}
           <BWelcome user={appContext.name} />
-          <Weather appContext={appContext} />
+          <BWeather appContext={appContext} />
           <BSearch />
           <BTask />
         </Layout>
