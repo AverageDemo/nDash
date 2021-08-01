@@ -34,6 +34,7 @@ export default function Start() {
 
     localStorage.setItem('name', values.name);
     localStorage.setItem('apiKey', values.apiKey);
+    localStorage.setItem('initialized', 'true');
     router.reload();
   };
 
@@ -68,7 +69,9 @@ export default function Start() {
                 <label htmlFor="apiKey" className="block text-sm font-medium text-gray-700 dark:text-gray-50">
                   Open Weather{' '}
                   <Link href="https://home.openweathermap.org/api_keys">
-                    <a>API Keys</a>
+                    <a target="_blank" className="text-indigo-200 hover:text-indigo-400">
+                      API Keys
+                    </a>
                   </Link>
                 </label>
                 <div className="mt-1">
