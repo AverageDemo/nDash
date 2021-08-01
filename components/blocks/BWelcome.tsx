@@ -9,7 +9,7 @@ export default function BWelcome({ user }: Props) {
           <div className="text-6xl pb-6 font-thin">
             Hello<p>{user}</p>
           </div>
-          <div className="pb-4 text-blue-700 dark:text-blue-200">
+          <div className="my-auto py-2 text-blue-700 dark:text-blue-200">
             Today is <span className="text-gray-900 dark:text-gray-50">{moment().format('dddd, MMMM Do YYYY')}</span>
           </div>
         </div>
