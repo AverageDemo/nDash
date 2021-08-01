@@ -1,5 +1,6 @@
 import moment from 'moment';
-import BCard from './BCard';
+
+import BCard from '@/blocks/BCard';
 
 export default function BWelcome({ user }: Props) {
   return (

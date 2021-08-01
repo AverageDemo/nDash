@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FormEvent, useState, useEffect } from 'react';
 
-import BCard from './blocks/BCard';
+import BCard from '@/blocks/BCard';
 
 export default function Start() {
   const router = useRouter();

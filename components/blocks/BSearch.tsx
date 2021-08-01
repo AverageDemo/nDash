@@ -1,4 +1,4 @@
-import BCard from './BCard';
+import BCard from '@/blocks/BCard';
 
 export default function BSearch() {
   return (

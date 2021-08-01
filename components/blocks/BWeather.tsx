@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
-import BCard from './BCard';
+import BCard from '@/blocks/BCard';
 import { AppContextInterface } from '@/context/AppContext';
 import type { CurrentWeatherInterface, WeatherObjectInterface } from '@/interfaces/weather.interface';
 
