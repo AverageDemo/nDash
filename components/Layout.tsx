@@ -1,8 +1,10 @@
 import Head from 'next/head';
-import { ReactNode } from 'react';
-import { CogIcon } from '@heroicons/react/outline';
+import { ReactNode, useState } from 'react';
+import Settings from '@/components/Settings';
 
 export default function Layout({ name, children }: Props) {
+  const [open, setOpen] = useState(false);
+
   return (
     <div className="bg-i0 h-screen">
       <Head>
@@ -15,11 +17,7 @@ export default function Layout({ name, children }: Props) {
         </div>
       </div>
 
-      <div className="fixed bottom-0 w-full">
-        <button className="float-right">
-          <CogIcon className="h-6 w-6 m-2 text-gray-600" />
-        </button>
-      </div>
+      <Settings />
     </div>
   );
 }
