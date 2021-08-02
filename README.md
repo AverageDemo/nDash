@@ -50,12 +50,12 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 ## 📋 To Do
 
 - [ ] Block designs
-- - [ ] Welcome block
-- - [ ] Weather block
-- - [ ] Task block
+- - [x] Welcome block
+- - [x] Weather block
+- - [x] Task block
 - - [ ] News feed block
 - [ ] News feed
-- [ ] Task system
+- [x] Task system
 - [ ] Search engine bar
 - [ ] Preferences (Search, BG, Light/Dark, Temp Units)
 
