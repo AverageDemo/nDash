@@ -48,7 +48,7 @@ export default function BTask() {
             />
           </div>
         </form>
-        <ul className="divide-y divide-gray-700 max-h-96 overflow-y-auto no-scrollbar">
+        <ul className="divide-y divide-gray-700 h-96 overflow-y-auto no-scrollbar">
           {tasks.length > 0 ? (
             tasks.map((task) => (
               <li key={task.id} className="py-4">
@@ -64,9 +64,9 @@ export default function BTask() {
               </li>
             ))
           ) : (
-            <li className="pt-4">
-              <div className="flex space-x-3">
-                <div className="flex-1 space-y-1">
+            <li>
+              <div className="flex space-x-3 h-96">
+                <div className="flex-1 m-auto space-y-1">
                   <div className="flex items-center justify-center">
                     <h3 className="text-sm font-medium">No tasks yet</h3>
                   </div>
